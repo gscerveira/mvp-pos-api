@@ -1,0 +1,1 @@
+FLASK_APP=calculadora_mqa.py
