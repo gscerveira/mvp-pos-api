@@ -8,4 +8,4 @@ class ScoreMQA(db.Model):
     id: so.Mapped[int] = so.mapped_column(primary_key=True)
     nome_arquivo: so.Mapped[str] = so.mapped_column(sa.String(64), index=True, unique=True)
     score: so.Mapped[int] = so.mapped_column(index=True)
-    avaliado_em: so.Mapped[datetime.datetime] = so.mapped_column(index=True)
+    avaliado_em: so.Mapped[datetime.datetime] = so.mapped_column(index=True, default=datetime.datetime.now(datetime.timezone.utc))
