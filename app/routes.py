@@ -13,7 +13,8 @@ def avaliar():
 # Endpoint para listar os scores de metadata de todos os datasets avaliados
 @app.route('/avaliacoes', methods=['GET'])
 def list_avaliacoes():
-    pass
+    avaliacoes = ScoreMQA.query.all()
+    return {'avaliacoes': [avaliacao.to_dict() for avaliacao in avaliacoes]}
 
 # Endpoint para listar os scores de metadata de um dataset avaliado
 @app.route('avaliacoes/<dataset_id>', methods=['GET'])
