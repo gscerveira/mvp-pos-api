@@ -174,3 +174,5 @@ api_mvp_pos/bin/python
 api_mvp_pos/bin/python3
 api_mvp_pos/bin/python3.10
 codealike.json
+app.db
+app.db

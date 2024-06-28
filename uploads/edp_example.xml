@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:edp="https://europeandataportal.eu/voc#"
+         xmlns:dct="http://purl.org/dc/terms/"
+         xmlns:spdx="http://spdx.org/rdf/terms#"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:j.0="http://data.europa.eu/88u/ontology/dcatapop#"
+         xmlns:adms="http://www.w3.org/ns/adms#"
+         xmlns:dqv="http://www.w3.org/ns/dqv#"
+         xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
+         xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+         xmlns:schema="http://schema.org/"
+         xmlns:dcat="http://www.w3.org/ns/dcat#"
+         xmlns:foaf="http://xmlns.com/foaf/0.1/">
+    <dcat:Dataset rdf:about="http://data.europa.eu/88u/dataset/measures-of-solidarity-with-ukraine-eur">
+        <dct:alternative xml:lang="en">EU solidarity with Ukraine</dct:alternative>
+        <dct:subject rdf:resource="http://eurovoc.europa.eu/1914"/>
+        <dcat:distribution>
+            <dcat:Distribution rdf:about="http://data.europa.eu/88u/distribution/4608d86c-fe4e-4ae4-9fe7-a550b8d44b28">
+                <dcat:accessURL rdf:resource="https://europa.eu/!jb8pvX"/>
+                <dct:title xml:lang="en">List of measures</dct:title>
+                <dcat:downloadURL rdf:resource="https://europa.eu/!jb8pvX"/>
+                <dct:type rdf:resource="http://publications.europa.eu/resource/authority/distribution-type/DOWNLOADABLE_FILE"/>
+                <dct:rights>
+                    <dct:RightsStatement rdf:about="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
+                </dct:rights>
+                <dct:license>
+                    <dct:LicenseDocument rdf:about="http://publications.europa.eu/resource/authority/licence/CC_BY_4_0"/>
+                </dct:license>
+                <dct:description xml:lang="en">List of measures in csv format</dct:description>
+                <dcat:mediaType>
+                    <dct:MediaType rdf:about="http://www.iana.org/assignments/media-types/text/csv"/>
+                </dcat:mediaType>
+                <dct:format>
+                    <dct:MediaTypeOrExtent rdf:about="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+                </dct:format>
+                <dct:identifier>http://data.europa.eu/88u/distribution/813268f8-95e0-46b5-97fc-bc59b093e3d0</dct:identifier>
+            </dcat:Distribution>
+        </dcat:distribution>
+        <dcat:distribution>
+            <dcat:Distribution rdf:about="http://data.europa.eu/88u/distribution/6e39a598-5732-4204-b7c3-4e3abb3ef006">
+                <dct:format>
+                    <dct:MediaTypeOrExtent rdf:about="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+                </dct:format>
+                <dct:title xml:lang="en">List of measures</dct:title>
+                <dct:rights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
+                <dcat:accessURL rdf:resource="https://europa.eu/!bCfRRj"/>
+                <dcat:downloadURL rdf:resource="https://europa.eu/!bCfRRj"/>
+                <dct:identifier>http://data.europa.eu/88u/distribution/6ae2d223-11d6-469e-8f88-7436f77d34fa</dct:identifier>
+                <dct:type rdf:resource="http://publications.europa.eu/resource/authority/distribution-type/DOWNLOADABLE_FILE"/>
+                <dct:license rdf:resource="http://publications.europa.eu/resource/authority/licence/CC_BY_4_0"/>
+                <adms:status rdf:resource="http://purl.org/adms/status/Completed"/>
+                <dcat:mediaType>
+                    <dct:MediaType rdf:about="http://www.iana.org/assignments/media-types/text/html"/>
+                </dcat:mediaType>
+                <dct:description xml:lang="en">List of measures in html format with actionable links</dct:description>
+            </dcat:Distribution>
+        </dcat:distribution>
+        <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
+        <dcat:landingPage>
+            <foaf:Document rdf:about="https://eur-lex.europa.eu/content/news/eu-measures-solidarity-ukraine.html">
+                <foaf:topic rdf:resource="http://data.europa.eu/88u/dataset/measures-of-solidarity-with-ukraine-eur"/>
+                <schema:url>https://eur-lex.europa.eu/content/news/eu-measures-solidarity-ukraine.html</schema:url>
+            </foaf:Document>
+        </dcat:landingPage>
+        <dct:publisher>
+            <foaf:Organization>
+                <foaf:mbox rdf:resource="mailto:example@europa.eu"/>
+                <foaf:name>
+                    Landesamt für Digitalisierung, Breitband und Vermessung
+                </foaf:name>
+                <foaf:homepage rdf:resource="http://www.europa.eu"/>
+            </foaf:Organization>
+        </dct:publisher>
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-03-17</dct:issued>
+        <dct:description xml:lang="en">This dataset contains a list of documents published on EUR-Lex that bring together the measures the EU has taken in solidarity with Ukraine. This list includes measures of assistance to Ukraine as well as related restrictive measures. Acts amended in the above mentioned context are also included. The list is updated regularly.</dct:description>
+        <dct:accrualPeriodicity>
+            <dct:Frequency rdf:about="http://publications.europa.eu/resource/authority/frequency/IRREG"/>
+        </dct:accrualPeriodicity>
+        <dct:title xml:lang="en">Measures in solidarity with Ukraine</dct:title>
+        <dct:language>
+            <dct:LinguisticSystem rdf:about="http://publications.europa.eu/resource/authority/language/ENG"/>
+        </dct:language>
+        <dcat:contactPoint>
+            <vcard:Kind rdf:about="http://www.w3.org/2006/vcard/ns#Kind/be870795-ffe2-4117-885d-191faca58bb6">
+                <vcard:hasEmail rdf:resource="mailto:EURLEX-HELPDESK@publications.europa.eu"/>
+                <vcard:hasURL>
+                    <foaf:Document rdf:about="https://eur-lex.europa.eu/contact.html">
+                        <schema:url>https://eur-lex.europa.eu/contact.html</schema:url>
+                        <foaf:topic rdf:resource="file:///usr/verticles/"/>
+                    </foaf:Document>
+                </vcard:hasURL>
+            </vcard:Kind>
+        </dcat:contactPoint>
+    </dcat:Dataset>
+</rdf:RDF>
