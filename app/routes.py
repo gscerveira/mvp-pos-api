@@ -2,7 +2,9 @@ from app import app, db
 from app.models import ScoreMQA
 import datetime
 from flask import request
+import os
 from app.utils import calcular_score_mqa, arquivo_permitido
+from werkzeug.utils import secure_filename
 
 @app.route('/')
 def main_page():
@@ -18,8 +20,10 @@ def avaliar():
         return {'erro': 'Nenhum arquivo selecionado'}, 400
     
     if arquivo and arquivo_permitido(arquivo.filename):
-        arquivo_xml = arquivo.read().decode('utf-8')
-        score = calcular_score_mqa(arquivo_xml)
+        #arquivo_xml = arquivo.read().decode('utf-8')
+        nome_arquivo = secure_filename(arquivo.filename)
+        arquivo.save(os.path.join(app.config['UPLOAD_FOLDER'], nome_arquivo))
+        score = calcular_score_mqa(nome_arquivo)
 
     # Salvar ou atualizar score na base de dados
         score_atual = ScoreMQA.query.filter_by(nome_arquivo=arquivo.filename).first()

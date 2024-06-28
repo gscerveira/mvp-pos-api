@@ -26,7 +26,7 @@ CRITERIO_SCORE = {
 def calcular_score_mqa(arquivo_xml):
     # Ler o arquivo e armazenar em um grafo RDF
     g = Graph()
-    g.parse(arquivo_xml)
+    g.parse(f'{Config.UPLOAD_FOLDER}/{arquivo_xml}')
 
     score = 0
 

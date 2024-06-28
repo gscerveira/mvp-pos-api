@@ -1,0 +1,40 @@
+<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+    <responseDate>2024-06-28T20:05:41Z</responseDate>
+    <request verb="ListRecords" set="blue-tongue" metadataPrefix="dcat_ap" />
+    <ListRecords>
+        <record>
+            <header>
+                <identifier />
+            </header>
+            <metadata>
+                <dcat:Dataset xmlns:dcat="http://www.w3.org/ns/dcat#"
+                    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                    xmlns:DCT="http://purl.org/dc/terms/"
+                    xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
+                    rdf:about="https://sebastien-datalake.cmcc.it/api/v2/datasets/blue-tongue">
+                    <DCT:title>Blue Tongue monthly data</DCT:title>
+                    <DCT:description>Blue Tongue monthly data from July to November</DCT:description>
+                    <DCT:issued rdf:datatype="http://purl.org/dc/terms/W3CDTF">2023-09-15</DCT:issued>
+                    <DCT:identifier>blue-tongue</DCT:identifier>
+                    <dcat:contactPoint>
+                        <rdf:Description rdf:nodeID="N13c79fcba9f74e3390577833a352f5bc">
+                            <vcard:fn>Data Deliver System Support Team</vcard:fn>
+                            <vcard:hasEmail rdf:resource="mailto:dds-support@cmcc.it" />
+                            <vcard:hasURL
+                                rdf:resource="https://www.cmcc.it/research-organization/research-divisions/advanced-scientific-computing-division#1553329820238-2055494b-9aa6" />
+                        </rdf:Description>
+                    </dcat:contactPoint>
+                    <dcat:distribution>
+                        <rdf:Description rdf:nodeID="Nb961382998e24604a2d6e2245ca27cbf">
+                            <dcat:accessURL
+                                rdf:resource="https://sebastien-datalake.cmcc.it/api/v2/datasets/blue-tongue" />
+                            <DCT:description>Blue Tongue monthly data from July to November</DCT:description>
+                        </rdf:Description>
+                    </dcat:distribution>
+                </dcat:Dataset>
+            </metadata>
+        </record>
+    </ListRecords>
+</OAI-PMH>
