@@ -2,7 +2,7 @@ from app import app, db
 from app.models import ScoreMQA
 import datetime
 from flask import request
-from utils import calcular_score_mqa, arquivo_permitido
+from app.utils import calcular_score_mqa, arquivo_permitido
 
 @app.route('/')
 def main_page():
