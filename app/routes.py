@@ -1,5 +1,8 @@
 from app import app, db
-from models import ScoreMQA
+from app.models import ScoreMQA
+import datetime
+from flask import request
+from utils import calcular_score_mqa, arquivo_permitido
 
 @app.route('/')
 def main_page():
@@ -8,7 +11,27 @@ def main_page():
 # Endpoint para realizar a avaliação do score de metadata de um dataset
 @app.route('/avaliar', methods=['POST'])
 def avaliar():
-    pass
+    if 'file' not in request.files:
+        return {'erro': 'Arquivo não encontrado'}, 400
+    arquivo = request.files['file']
+    if arquivo.filename == '':
+        return {'erro': 'Nenhum arquivo selecionado'}, 400
+    
+    if arquivo and arquivo_permitido(arquivo.filename):
+        arquivo_xml = arquivo.read().decode('utf-8')
+        score = calcular_score_mqa(arquivo_xml)
+
+    # Salvar ou atualizar score na base de dados
+        score_atual = ScoreMQA.query.filter_by(nome_arquivo=arquivo.filename).first()
+        if score_atual:
+            score_atual.score = score
+            score_atual.avaliado_em = datetime.datetime.now(datetime.timezone.utc)
+        else:
+            novo_score = ScoreMQA(nome_arquivo=arquivo.filename, score=score)
+            db.session.add(novo_score)
+        
+        db.session.commit()
+        return {'message': 'Avaliação realizada com sucesso', 'score': score}, 200
 
 # Endpoint para listar os scores de metadata de todos os datasets avaliados
 @app.route('/avaliacoes', methods=['GET'])
@@ -17,7 +40,7 @@ def list_avaliacoes():
     return {'avaliacoes': [avaliacao.to_dict() for avaliacao in avaliacoes]}
 
 # Endpoint para listar os scores de metadata de um dataset avaliado
-@app.route('avaliacoes/<dataset_id>', methods=['GET'])
+@app.route('/avaliacoes/<dataset_id>', methods=['GET'])
 def get_avaliacao(dataset_id):
         return db.get_or_404(ScoreMQA, dataset_id).to_dict()
     

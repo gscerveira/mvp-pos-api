@@ -1,3 +1,4 @@
+from app import Config
 from rdflib import Graph, Namespace
 from rdflib.namespace import DCAT, DCTERMS as DCT
 
@@ -35,6 +36,12 @@ def calcular_score_mqa(arquivo_xml):
             score += value
 
     return score
+
+
+# Função que checa se a extensão de um arquivo é permitida
+def arquivo_permitido(filename):
+    return '.' in filename and \
+           filename.rsplit('.', 1)[1].lower() in Config.ALLOWED_EXTENSIONS
 
 
 
