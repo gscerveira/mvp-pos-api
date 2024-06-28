@@ -20,10 +20,10 @@ def avaliar():
         return {'erro': 'Nenhum arquivo selecionado'}, 400
     
     if arquivo and arquivo_permitido(arquivo.filename):
-        #arquivo_xml = arquivo.read().decode('utf-8')
         nome_arquivo = secure_filename(arquivo.filename)
-        arquivo.save(os.path.join(app.config['UPLOAD_FOLDER'], nome_arquivo))
-        score = calcular_score_mqa(nome_arquivo)
+        caminho_arquivo = os.path.join(app.config['UPLOAD_FOLDER'], nome_arquivo)
+        arquivo.save(caminho_arquivo)
+        score = calcular_score_mqa(caminho_arquivo)
 
     # Salvar ou atualizar score na base de dados
         score_atual = ScoreMQA.query.filter_by(nome_arquivo=arquivo.filename).first()
@@ -35,7 +35,7 @@ def avaliar():
             db.session.add(novo_score)
         
         db.session.commit()
-        return {'message': 'Avaliação realizada com sucesso', 'score': score}, 200
+        return {'message': 'Score avaliado com sucesso', 'score': score}, 200
 
 # Endpoint para listar os scores de metadata de todos os datasets avaliados
 @app.route('/avaliacoes', methods=['GET'])
