@@ -2,6 +2,7 @@ from app import app, db
 from app.models import ScoreMQA
 import datetime
 from flask import request
+from flasgger import swag_from
 import os
 from app.utils import calcular_score_mqa, arquivo_permitido
 from werkzeug.utils import secure_filename
@@ -12,6 +13,7 @@ def main_page():
 
 # Endpoint para realizar a avaliação do score de metadata de um dataset
 @app.route('/avaliar', methods=['POST'])
+@swag_from('openapi/avaliar.yaml')
 def avaliar():
     if 'file' not in request.files:
         return {'erro': 'Arquivo não encontrado'}, 400
@@ -39,12 +41,14 @@ def avaliar():
 
 # Endpoint para listar os scores de metadata de todos os datasets avaliados
 @app.route('/avaliacoes', methods=['GET'])
+@swag_from('openapi/avaliacoes.yaml')
 def list_avaliacoes():
     avaliacoes = ScoreMQA.query.all()
     return {'avaliacoes': [avaliacao.to_dict() for avaliacao in avaliacoes]}
 
 # Endpoint para listar os scores de metadata de um dataset avaliado
 @app.route('/avaliacoes/<dataset_id>', methods=['GET'])
+@swag_from('openapi/avaliacoes_id.yaml')
 def get_avaliacao(dataset_id):
         return db.get_or_404(ScoreMQA, dataset_id).to_dict()
     

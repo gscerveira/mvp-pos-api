@@ -1,5 +1,7 @@
 Endpoint que retorna a avaliação de um dataset específico.
 ---
+tags:
+  - Avaliações
 parameters:
   - in: path
     name: dataset_id

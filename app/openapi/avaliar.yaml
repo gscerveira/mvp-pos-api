@@ -1,5 +1,7 @@
 Endpoint que retorna o score de metadados do dataset.
 ---
+tags:
+  - Avaliações
 parameters:
   - in: formData
     name: file

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:dct="http://purl.org/dc/terms/"
+  xmlns:dcat="http://www.w3.org/ns/dcat#"
+  xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <foaf:Organization rdf:about="https://www.cmcc.it/research-organization/research-divisions/advanced-scientific-computing-division#1553329820238-2055494b-9aa6">
+    <foaf:name>Data Deliver System Support Team</foaf:name>
+    <foaf:mbox>dds-support@cmcc.it</foaf:mbox>
+    <foaf:homepage rdf:resource="https://www.cmcc.it/research-organization/research-divisions/advanced-scientific-computing-division#1553329820238-2055494b-9aa6"/>
+  </foaf:Organization>
+  <dcat:Dataset rdf:about="https://sebastien-datalake.cmcc.it/api/v2/datasets/blue-tongue">
+    <dct:title>Blue Tongue monthly data</dct:title>
+    <dct:description>Blue Tongue monthly data from July to November</dct:description>
+    <dcat:landingPage rdf:resource="https://www.cmcc.it/research-organization/research-divisions/advanced-scientific-computing-division#1553329820238-2055494b-9aa6"/>
+    <dct:identifier>blue-tongue</dct:identifier>
+    <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-09-15T00:00:00</dct:issued>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-05-29T15:29:56.914018</dct:modified>
+    <foaf:page rdf:resource="https://www.cmcc.it/research-organization/research-divisions/advanced-scientific-computing-division#1553329820238-2055494b-9aa6"/>
+    <dcat:contactPoint>
+      <vcard:Organization rdf:nodeID="N02eef105616e4bdd8aff2f4d73a6038a">
+        <vcard:fn>Data Deliver System Support Team</vcard:fn>
+        <vcard:hasEmail rdf:resource="mailto:dds-support@cmcc.it"/>
+      </vcard:Organization>
+    </dcat:contactPoint>
+    <dct:publisher rdf:resource="https://www.cmcc.it/research-organization/research-divisions/advanced-scientific-computing-division#1553329820238-2055494b-9aa6"/>
+    <dcat:distribution>
+      <dcat:Distribution rdf:about="https://localhost:8443/dataset/1ee2f914-cc9d-4890-9247-0456f1055b1c/resource/216de8b6-f6a6-430f-a9c6-8c7ea287aa4a">
+        <dct:title>Blue Tongue monthly data</dct:title>
+        <dct:description>Blue Tongue monthly data from July to November</dct:description>
+        <dcat:accessURL rdf:resource="https://sebastien-datalake.cmcc.it/api/v2/datasets/blue-tongue"/>
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-09-15T00:00:00</dct:issued>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-05-29T15:29:56.903992</dct:modified>
+      </dcat:Distribution>
+    </dcat:distribution>
+  </dcat:Dataset>
+</rdf:RDF>

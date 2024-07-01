@@ -1,5 +1,7 @@
 Endpoint que retorna uma lista de todas as avaliações realizadas.
 ---
+tags:
+  - Avaliações
 'responses':
   '200':
     description: Listas das avaliações realizadas
