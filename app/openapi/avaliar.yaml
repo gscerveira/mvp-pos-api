@@ -1,0 +1,25 @@
+Endpoint que retorna o score de metadados do dataset.
+---
+parameters:
+  - in: formData
+    name: file
+    type: file
+    required: true
+    description: Arquivo XML contendo os metadados do dataset.
+responses:
+  '200':
+    description: Score avaliado com sucesso
+    schema:
+      type: object
+      properties:
+        message:
+          type: string
+        score:
+          type: number
+  '400':
+    description: Erro na requisição
+    schema:
+      type: object
+      properties:
+        erro:
+          type: string

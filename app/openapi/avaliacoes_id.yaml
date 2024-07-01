@@ -1,0 +1,29 @@
+Endpoint que retorna a avaliação de um dataset específico.
+---
+parameters:
+  - in: path
+    name: dataset_id
+    required: true
+    type: integer
+    description: ID do dataset
+responses:
+  '200':
+    description: Avaliação do dataset
+    schema:
+      $ref: '#/definitions/Avaliacao'
+  '404':
+    description: Dataset não encontrado
+
+definitions:
+  Avaliacao:
+    type: object
+    properties:
+      id:
+        type: integer
+      nome_arquivo:
+        type: string
+      score:
+        type: number
+      avaliado_em:
+        type: string
+        formate: date-time

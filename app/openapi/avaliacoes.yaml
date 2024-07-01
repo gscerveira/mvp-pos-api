@@ -1,0 +1,26 @@
+Endpoint que retorna uma lista de todas as avaliações realizadas.
+---
+'responses':
+  '200':
+    description: Listas das avaliações realizadas
+    schema:
+      type: object
+      properties:
+        avaliacoes:
+          type: array
+          items:
+            $ref: '#/definitions/Avaliacao'
+
+definitions:
+  Avaliacao:
+    type: object
+    properties:
+      id:
+        type: integer
+      nome_arquivo:
+        type: string
+      score:
+        type: number
+      avaliado_em:
+        type: string
+        formate: date-time
