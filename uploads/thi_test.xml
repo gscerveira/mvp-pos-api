@@ -1,0 +1,39 @@
+<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+    <responseDate>2024-07-02T12:09:51Z</responseDate>
+    <request verb="ListRecords" set="thi" metadataPrefix="dcat_ap" />
+    <ListRecords>
+        <record>
+            <header>
+                <identifier />
+            </header>
+            <metadata>
+                <dcat:Dataset xmlns:dcat="http://www.w3.org/ns/dcat#"
+                    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                    xmlns:DCT="http://purl.org/dc/terms/"
+                    xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
+                    rdf:about="https://sebastien-datalake.cmcc.it/api/v2/datasets/thi">
+                    <DCT:title>Thermohygrometric Indices over Italy</DCT:title>
+                    <DCT:description>Thermohygrometric Indices derived from MISTRAL COSMO-2I data</DCT:description>
+                    <DCT:issued rdf:datatype="http://purl.org/dc/terms/W3CDTF">2023-06-19</DCT:issued>
+                    <DCT:identifier>thi</DCT:identifier>
+                    <dcat:contactPoint>
+                        <rdf:Description rdf:nodeID="N287233d4299145ea9abb9a5f646a2c6e">
+                            <vcard:fn>Data Deliver System Support Team</vcard:fn>
+                            <vcard:hasEmail rdf:resource="mailto:dds-support@cmcc.it" />
+                            <vcard:hasURL
+                                rdf:resource="https://www.cmcc.it/research-organization/research-divisions/advanced-scientific-computing-division#1553329820238-2055494b-9aa6" />
+                        </rdf:Description>
+                    </dcat:contactPoint>
+                    <dcat:distribution>
+                        <rdf:Description rdf:nodeID="Nc9c9f155c1ef4dbbb15cd7b16b2f5cc8">
+                            <dcat:accessURL
+                                rdf:resource="https://sebastien-datalake.cmcc.it/api/v2/datasets/thi" />
+                        </rdf:Description>
+                    </dcat:distribution>
+                </dcat:Dataset>
+            </metadata>
+        </record>
+    </ListRecords>
+</OAI-PMH>
