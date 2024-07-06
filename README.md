@@ -30,3 +30,4 @@ Instruções passo a passo para instalar e configurar o projeto:
     ```
     flask run
     ```
+7. Acesse a API em [http://127.0.0.1:5000/], onde você encontrará a documentação da API.

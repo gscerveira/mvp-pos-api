@@ -6,10 +6,11 @@ from flasgger import swag_from
 import os
 from app.utils import calcular_score_mqa, arquivo_permitido
 from werkzeug.utils import secure_filename
+from flask import redirect, url_for
 
 @app.route('/')
 def main_page():
-    return 'Hello, World!'
+    return redirect(url_for('flasgger.apidocs'))
 
 # Endpoint para realizar a avaliação do score de metadata de um dataset
 @app.route('/avaliar', methods=['POST'])
